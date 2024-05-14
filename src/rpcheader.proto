@@ -1,0 +1,10 @@
+syntax = "proto3";// 声明了protobuf的版本
+
+package mprpc; // 声明了代码所在的包（对于C++来说是namespace）
+
+message RpcHeader
+{
+    bytes service_name = 1;
+    bytes method_name = 2;
+    uint32 args_size = 3;
+}
