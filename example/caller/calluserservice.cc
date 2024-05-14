@@ -6,6 +6,7 @@
 int main(int argc, char **argv)
 {
     // 整个程序启动以后，想使用mprpc框架来享受rpc服务调用，一定需要先调用框架的初始化函数（只初始化一次）
+    //初始化函数主要是读取配置文件，配置文件中rpcservice的ip和端口和zookeeper的ip和端口
     MprpcApplication::Init(argc, argv);
 
     // 演示调用远程发布的rpc方法Login

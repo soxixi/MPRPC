@@ -19,7 +19,7 @@ public:
         return vec;
     }
 
-    // 重写基类方法
+    // 重写基类方法 由框架调用
     void GetFriendsList(::google::protobuf::RpcController* controller,
                        const ::fixbug::GetFriendsListRequest* request,
                        ::fixbug::GetFriendsListResponse* response,
@@ -29,6 +29,7 @@ public:
         std::vector<std::string> friendsList = GetFriendsList(userid);
         response->mutable_result()->set_errcode(0);
         response->mutable_result()->set_errmsg("");
+        //将friendsList中的每个字符串元素添加到response对象的friends字段中
         for (std::string &name : friendsList)
         {
             std::string *p = response->add_friends();
@@ -40,8 +41,9 @@ public:
 
 int main(int argc, char **argv)
 {
-    LOG_ERR("ddddd");
-    LOG_INFO("ddddd");
+    LOG_INFO("first log message!");
+    LOG_ERR("%s:%s:%d",__FILE__, __FUNCTION__ ,__LINE__);
+    
 
     // 调用框架的初始化操作
     MprpcApplication::Init(argc, argv);

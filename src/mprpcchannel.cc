@@ -11,6 +11,7 @@
 #include "mprpccontroller.h"
 #include "zookeeperutil.h"
 
+//rpc服务调用方
 /*
 header_size + service_name method_name args_size + args
 */
@@ -28,7 +29,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
     // 获取参数的序列化字符串长度 args_size
     uint32_t args_size = 0;
     std::string args_str;
-    if (request->SerializeToString(&args_str))
+    if (request->SerializeToString(&args_str))//序列化
     {
         args_size = args_str.size();
     }
@@ -58,7 +59,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
 
     // 组织待发送的rpc请求的字符串
     std::string send_rpc_str;
-    send_rpc_str.insert(0, std::string((char*)&header_size, 4)); // header_size
+    send_rpc_str.insert(0, std::string((char*)&header_size, 4)); // header_size 从0开始的前4个字节
     send_rpc_str += rpc_header_str; // rpcheader
     send_rpc_str += args_str; // args
 
@@ -148,7 +149,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
     if (!response->ParseFromArray(recv_buf, recv_size))
     {
         close(clientfd);
-        char errtxt[512] = {0};
+        char errtxt[1200] = {0};
         sprintf(errtxt, "parse error! response_str:%s", recv_buf);
         controller->SetFailed(errtxt);
         return;

@@ -116,17 +116,17 @@ zookeeper/zookeeper.h
 string
 -
 
-/home/tony/projects/mprpc/src/logger.cc
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/logger.cc
 logger.h
-/home/tony/projects/mprpc/src/logger.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/logger.h
 time.h
 -
 iostream
 -
 
-/home/tony/projects/mprpc/src/mprpcapplication.cc
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpcapplication.cc
 mprpcapplication.h
-/home/tony/projects/mprpc/src/mprpcapplication.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpcapplication.h
 iostream
 -
 unistd.h
@@ -134,13 +134,13 @@ unistd.h
 string
 -
 
-/home/tony/projects/mprpc/src/mprpcchannel.cc
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpcchannel.cc
 mprpcchannel.h
-/home/tony/projects/mprpc/src/mprpcchannel.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpcchannel.h
 string
 -
 rpcheader.pb.h
-/home/tony/projects/mprpc/src/rpcheader.pb.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/rpcheader.pb.h
 sys/types.h
 -
 sys/socket.h
@@ -154,27 +154,27 @@ unistd.h
 errno.h
 -
 mprpcapplication.h
-/home/tony/projects/mprpc/src/mprpcapplication.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpcapplication.h
 mprpccontroller.h
-/home/tony/projects/mprpc/src/mprpccontroller.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpccontroller.h
 zookeeperutil.h
-/home/tony/projects/mprpc/src/zookeeperutil.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/zookeeperutil.h
 
-/home/tony/projects/mprpc/src/mprpcconfig.cc
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpcconfig.cc
 mprpcconfig.h
-/home/tony/projects/mprpc/src/mprpcconfig.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpcconfig.h
 iostream
 -
 string
 -
 
-/home/tony/projects/mprpc/src/mprpccontroller.cc
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpccontroller.cc
 mprpccontroller.h
-/home/tony/projects/mprpc/src/mprpccontroller.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpccontroller.h
 
-/home/tony/projects/mprpc/src/rpcheader.pb.cc
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/rpcheader.pb.cc
 rpcheader.pb.h
-/home/tony/projects/mprpc/src/rpcheader.pb.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/rpcheader.pb.h
 algorithm
 -
 google/protobuf/io/coded_stream.h
@@ -196,23 +196,23 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/tony/projects/mprpc/src/rpcprovider.cc
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/rpcprovider.cc
 rpcprovider.h
-/home/tony/projects/mprpc/src/rpcprovider.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/rpcprovider.h
 mprpcapplication.h
-/home/tony/projects/mprpc/src/mprpcapplication.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpcapplication.h
 rpcheader.pb.h
-/home/tony/projects/mprpc/src/rpcheader.pb.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/rpcheader.pb.h
 logger.h
-/home/tony/projects/mprpc/src/logger.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/logger.h
 zookeeperutil.h
-/home/tony/projects/mprpc/src/zookeeperutil.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/zookeeperutil.h
 
-/home/tony/projects/mprpc/src/zookeeperutil.cc
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/zookeeperutil.cc
 zookeeperutil.h
-/home/tony/projects/mprpc/src/zookeeperutil.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/zookeeperutil.h
 mprpcapplication.h
-/home/tony/projects/mprpc/src/mprpcapplication.h
+/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpcapplication.h
 semaphore.h
 -
 iostream

@@ -1,6 +1,6 @@
-syntax = "proto3";
+syntax = "proto3";// 声明了protobuf的版本
 
-package mprpc;
+package mprpc; // 声明了代码所在的包（对于C++来说是namespace）
 
 message RpcHeader
 {

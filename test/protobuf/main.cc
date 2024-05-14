@@ -11,7 +11,7 @@ int main()
     // rc->set_errmsg("登录处理失败了");
     
     GetFriendListsResponse rsp;
-    ResultCode *rc = rsp.mutable_result();
+    ResultCode *rc = rsp.mutable_result(); //成员变量result是另一个类对象ResultCode mutable_result获取可变的成员对象的指针
     rc->set_errcode(0);
 
     User *user1 = rsp.add_friend_list();

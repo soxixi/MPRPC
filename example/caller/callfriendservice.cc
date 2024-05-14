@@ -19,7 +19,7 @@ int main(int argc, char **argv)
     stub.GetFriendsList(&controller, &request, &response, nullptr); // RpcChannel->RpcChannel::callMethod 集中来做所有rpc方法调用的参数序列化和网络发送
 
     // 一次rpc调用完成，读调用的结果
-    if (controller.Failed())
+    if (controller.Failed())//m_failed为true，发生错误
     {
         std::cout << controller.ErrorText() << std::endl;
     }
