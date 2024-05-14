@@ -149,7 +149,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
     if (!response->ParseFromArray(recv_buf, recv_size))
     {
         close(clientfd);
-        char errtxt[1024] = {0};
+        char errtxt[1200] = {0};
         sprintf(errtxt, "parse error! response_str:%s", recv_buf);
         controller->SetFailed(errtxt);
         return;
