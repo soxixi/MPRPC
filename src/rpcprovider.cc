@@ -4,7 +4,6 @@
 #include "logger.h"
 #include "zookeeperutil.h"
 
-//rpc服务提供方
 /*
 service_name =>  service描述   
                         =》 service* 记录服务对象
@@ -65,7 +64,7 @@ void RpcProvider::Run()
     // service_name为永久性节点    method_name为临时性节点
     for (auto &sp : m_serviceMap) 
     {
-        // /service_name 服务名   /UserServiceRpc
+        // /service_name   /UserServiceRpc
         std::string service_path = "/" + sp.first;
         zkCli.Create(service_path.c_str(), nullptr, 0);
         for (auto &mp : sp.second.m_methodMap)
@@ -84,7 +83,7 @@ void RpcProvider::Run()
 
     // 启动网络服务
     server.start();
-    m_eventLoop.loop(); //开始处理客户端请求
+    m_eventLoop.loop(); 
 }
 
 // 新的socket连接回调
@@ -172,8 +171,7 @@ void RpcProvider::OnMessage(const muduo::net::TcpConnectionPtr &conn,
 
     // 生成rpc方法调用的请求request和响应response参数
     google::protobuf::Message *request = service->GetRequestPrototype(method).New();
-    //获取了想请求的服务对象里面某个方法的请求类型 .New()生成一个新对象
-    if (!request->ParseFromString(args_str)) //rpc方法参数的反序列化
+    if (!request->ParseFromString(args_str))
     {
         std::cout << "request parse error, content:" << args_str << std::endl;
         return;
@@ -181,12 +179,6 @@ void RpcProvider::OnMessage(const muduo::net::TcpConnectionPtr &conn,
     google::protobuf::Message *response = service->GetResponsePrototype(method).New();
 
     // 给下面的method方法的调用，绑定一个Closure的回调函数
-    //this - 指向当前RpcProvider对象的指针，以便在回调中访问成员函数。
-    // &RpcProvider::SendRpcResponse - 指向成员函数SendRpcResponse的指针，该函数将被作为回调执行。
-    //相当于调用SendRpcResponse函数，并将conn和response作为参数传递给它。
-    // conn - 传递给SendRpcResponse函数的参数，表示当前Tcp连接。
-    // response - 传递给SendRpcResponse函数的参数，表示rpc方法的响应对象。
-    // 相当于done->run(),回调函数。
     google::protobuf::Closure *done = google::protobuf::NewCallback<RpcProvider, 
                                                                     const muduo::net::TcpConnectionPtr&, 
                                                                     google::protobuf::Message*>
@@ -196,9 +188,6 @@ void RpcProvider::OnMessage(const muduo::net::TcpConnectionPtr &conn,
 
     // 在框架上根据远端rpc请求，调用当前rpc节点上发布的方法
     // new UserService().Login(controller, request, response, done)
-    //  virtual void CallMethod(const MethodDescriptor* method,
-                        //   RpcController* controller, const Message* request,
-                        //   Message* response, Closure* done) = 0;
     service->CallMethod(method, nullptr, request, response, done);
 }
 
@@ -206,7 +195,7 @@ void RpcProvider::OnMessage(const muduo::net::TcpConnectionPtr &conn,
 void RpcProvider::SendRpcResponse(const muduo::net::TcpConnectionPtr& conn, google::protobuf::Message *response)
 {
     std::string response_str;
-    if (response->SerializeToString(&response_str)) // response进行序列化，序列化后的字符串存放在response_str中
+    if (response->SerializeToString(&response_str)) // response进行序列化
     {
         // 序列化成功后，通过网络把rpc方法执行的结果发送会rpc的调用方
         conn->send(response_str);

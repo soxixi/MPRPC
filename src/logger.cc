@@ -6,7 +6,7 @@
 Logger& Logger::GetInstance()
 {
     static Logger logger;
-    return logger;//返回logger的引用
+    return logger;
 }
 
 Logger::Logger()
@@ -23,8 +23,6 @@ Logger::Logger()
             sprintf(file_name, "%d-%d-%d-log.txt", nowtm->tm_year+1900, nowtm->tm_mon+1, nowtm->tm_mday);
 
             FILE *pf = fopen(file_name, "a+");
-            //"a+"模式，这意味着文件以附加模式打开，且文件指针会被定位到文件末尾，之后的所有写操作都会追加到文件末尾。
-            //同时，"a+"模式也允许读取文件内容。函数会返回一个指向打开文件的FILE指针，如果文件打开失败，则返回NULL。
             if (pf == nullptr)
             {
                 std::cout << "logger file : " << file_name << " open error!" << std::endl;

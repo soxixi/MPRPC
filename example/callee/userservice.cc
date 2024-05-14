@@ -32,7 +32,7 @@ public:
     void Login(::google::protobuf::RpcController* controller,
                        const ::fixbug::LoginRequest* request,
                        ::fixbug::LoginResponse* response,
-                       ::google::protobuf::Closure* done)//回调操作 Closure里面是一个抽象类，里面有一个纯虚函数run
+                       ::google::protobuf::Closure* done)
     {
         // 框架给业务上报了请求参数LoginRequest，应用获取相应数据做本地业务
         std::string name = request->name();
@@ -43,7 +43,6 @@ public:
 
         // 把响应写入  包括错误码、错误消息、返回值
         fixbug::ResultCode *code = response->mutable_result();
-        //mutable_result() 用于获取response对象中的 result 字段，并返回一个可修改的指针。
         code->set_errcode(0);
         code->set_errmsg("");
         response->set_sucess(login_result);

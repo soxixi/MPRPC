@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "../../../bin/consumer"
-  "../../../bin/consumer.pdb"
-  "CMakeFiles/consumer.dir/__/friend.pb.cc.o"
   "CMakeFiles/consumer.dir/callfriendservice.cc.o"
+  "CMakeFiles/consumer.dir/__/friend.pb.cc.o"
+  "../../../bin/consumer.pdb"
+  "../../../bin/consumer"
 )
 
 # Per-language clean rules from dependency scanning.

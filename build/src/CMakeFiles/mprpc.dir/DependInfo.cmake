@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/sccc/mprpc/mprpc_sc/MPRPC/src/logger.cc" "/home/sccc/mprpc/mprpc_sc/MPRPC/build/src/CMakeFiles/mprpc.dir/logger.cc.o"
-  "/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpcapplication.cc" "/home/sccc/mprpc/mprpc_sc/MPRPC/build/src/CMakeFiles/mprpc.dir/mprpcapplication.cc.o"
-  "/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpcchannel.cc" "/home/sccc/mprpc/mprpc_sc/MPRPC/build/src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o"
-  "/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpcconfig.cc" "/home/sccc/mprpc/mprpc_sc/MPRPC/build/src/CMakeFiles/mprpc.dir/mprpcconfig.cc.o"
-  "/home/sccc/mprpc/mprpc_sc/MPRPC/src/mprpccontroller.cc" "/home/sccc/mprpc/mprpc_sc/MPRPC/build/src/CMakeFiles/mprpc.dir/mprpccontroller.cc.o"
-  "/home/sccc/mprpc/mprpc_sc/MPRPC/src/rpcheader.pb.cc" "/home/sccc/mprpc/mprpc_sc/MPRPC/build/src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o"
-  "/home/sccc/mprpc/mprpc_sc/MPRPC/src/rpcprovider.cc" "/home/sccc/mprpc/mprpc_sc/MPRPC/build/src/CMakeFiles/mprpc.dir/rpcprovider.cc.o"
-  "/home/sccc/mprpc/mprpc_sc/MPRPC/src/zookeeperutil.cc" "/home/sccc/mprpc/mprpc_sc/MPRPC/build/src/CMakeFiles/mprpc.dir/zookeeperutil.cc.o"
+  "/home/tony/projects/mprpc/src/logger.cc" "/home/tony/projects/mprpc/build/src/CMakeFiles/mprpc.dir/logger.cc.o"
+  "/home/tony/projects/mprpc/src/mprpcapplication.cc" "/home/tony/projects/mprpc/build/src/CMakeFiles/mprpc.dir/mprpcapplication.cc.o"
+  "/home/tony/projects/mprpc/src/mprpcchannel.cc" "/home/tony/projects/mprpc/build/src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o"
+  "/home/tony/projects/mprpc/src/mprpcconfig.cc" "/home/tony/projects/mprpc/build/src/CMakeFiles/mprpc.dir/mprpcconfig.cc.o"
+  "/home/tony/projects/mprpc/src/mprpccontroller.cc" "/home/tony/projects/mprpc/build/src/CMakeFiles/mprpc.dir/mprpccontroller.cc.o"
+  "/home/tony/projects/mprpc/src/rpcheader.pb.cc" "/home/tony/projects/mprpc/build/src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o"
+  "/home/tony/projects/mprpc/src/rpcprovider.cc" "/home/tony/projects/mprpc/build/src/CMakeFiles/mprpc.dir/rpcprovider.cc.o"
+  "/home/tony/projects/mprpc/src/zookeeperutil.cc" "/home/tony/projects/mprpc/build/src/CMakeFiles/mprpc.dir/zookeeperutil.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

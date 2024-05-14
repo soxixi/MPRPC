@@ -14,7 +14,7 @@ void MprpcConfig::LoadConfigFile(const char *config_file)
     }
 
     // 1.注释   2.正确的配置项 =    3.去掉开头的多余的空格 
-    while(!feof(pf))//文件指针 pf 所指向的文件是否还未到达文件末尾
+    while(!feof(pf))
     {
         char buf[512] = {0};
         fgets(buf, 512, pf);
